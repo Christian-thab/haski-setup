@@ -2,8 +2,8 @@ providers:
   docker:
     exposedByDefault: false
     network: traefik_gateway
-  file:
-    directory: "/etc/traefik/dynamic"
+  #file:
+    #directory: "/etc/traefik/dynamic"
 entryPoints:
   web:
     address: :80
@@ -24,7 +24,7 @@ certificatesResolvers:
     acme:
       tlsChallenge: true
       email: "email@mail.com"
-      storage: "/letsencrypt/acme.json"
+      storage: "/certs/acme.json"
 
 accessLog:
   filePath: "/traefiklogs/access.log"
