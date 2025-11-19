@@ -26,7 +26,7 @@ services:
       - MOODLE_DATABASE_PASSWORD=maria_db_password
       - MOODLE_DATABASE_NAME=bitnami_moodle
     volumes:
-      - 'moodle_data:/bitnami/haski_moodle'
+      - 'moodle_data:/bitnami/moodle'
       - 'moodledata_data:/bitnami/moodledata'
     restart: always
     labels:
