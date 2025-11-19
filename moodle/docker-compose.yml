@@ -1,7 +1,7 @@
 version: '1.0'
 services:
   haski_maria_db:
-    image: docker.io/bitnami/mariadb:10.6
+    image: docker.io/bitnamilegacy/mariadb:10.6
     container_name: haski_maria_db
     environment:
       - MARIADB_USER=maria_db_user
@@ -15,7 +15,7 @@ services:
     restart: always
 
   haski_moodle:
-    image: docker.io/bitnami/moodle:4.2
+    image: docker.io/bitnamilegacy/moodle:4.2
     container_name: haski_moodle
     depends_on:
       - haski_maria_db
