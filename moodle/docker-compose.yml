@@ -31,7 +31,7 @@ services:
     restart: always
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.haski_moodle.rule=Host(`lms.url`)"
+      - "traefik.http.routers.haski_moodle.rule=Host(`ab.dev.haski.app`)"
       - "traefik.http.routers.haski_moodle.tls=true"
       - "traefik.http.routers.haski_moodle.tls.certresolver=le"
     networks:
@@ -44,7 +44,7 @@ services:
     restart: always
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.haski_phpmyadmin.rule=Host(`phpmyadmin.url`)"
+      - "traefik.http.routers.haski_phpmyadmin.rule=Host(`ab.dev.php.haski.app`)"
       - "traefik.http.routers.haski_phpmyadmin.tls=true"
       - "traefik.http.routers.haski_phpmyadmin.tls.certresolver=le"
     environment:
