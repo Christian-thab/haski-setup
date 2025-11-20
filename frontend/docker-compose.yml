@@ -10,7 +10,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.haski_frontend.tls=true"
       - "traefik.http.routers.haski_frontend.entrypoints=websecure"
-      - "traefik.http.routers.haski_frontend.rule=Host(`frontend.url`)"
+      - "traefik.http.routers.haski_frontend.rule=Host(`ab.dev.haski.haski.app`)"
       - "traefik.http.services.haski_frontend.loadbalancer.server.port=80"
       - "traefik.http.routers.haski_frontend.tls.certresolver=le"
     volumes:
