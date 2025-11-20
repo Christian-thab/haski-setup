@@ -7,7 +7,7 @@ services:
       - ./.flaskenv
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.haski_backend.rule=Host(`backend.url`)"
+      - "traefik.http.routers.haski_backend.rule=Host(`ab.dev.backend.haski.app`)"
       - "traefik.http.routers.haski_backend.tls=true"
       - "traefik.http.services.haski_backend.loadbalancer.server.port=5000"
       - "traefik.http.routers.haski_backend.tls.certresolver=le"
